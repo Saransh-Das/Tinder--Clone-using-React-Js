@@ -1,0 +1,25 @@
+pass = s9BWdpNy1fTfWwni
+
+
+[
+    {
+      name: "Elon Musk",
+      url: "https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk-700x467.jpg",
+    },
+    {
+      name: "Jeff Bezos",
+      url: "https://bsmedia.business-standard.com/_media/bs/img/article/2021-02/03/full/1612372052-5838.jpg",
+    },
+  ]
+
+
+
+  useEffect(() => {
+    async function fetchData() {
+      const req = await axios.get("/tinder/cards");
+
+      setPeople(req.data);
+    }
+
+    fetchData();
+  }, []);
